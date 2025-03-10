@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ about.name }}</title>
+</head>
+<body>
+    <h1>{{ about.text }}</h1>
+    <img src="{{ about.img.url }}" alt="{{ about.offer }}" alt="{{ about.offer2 }}" alt="{{ about.offer3 }}" style="max-width: 100%; height: auto;">
+    <p>{{ about.description }}</p>
+    <p><strong>Uploaded on:</strong> {{ about.uploaded_at }}</p>
+    <a href="{% url 'index' %}">Back to Home</a> <!-- Asosiy sahifaga qaytish -->
+</body>
+    <h2>Comment</h2>
+{% for comment in about.comment.all %}
+    <p><strong> {{ comment.user.username }}:</strong> {{comment.text}}</p>
+{% empty %}
+    <p> No comment yet.</p>
+{% endfor %}
+
+{% if user.is_authenticated %}
+    <h3>Add a Comment</h3>
+    <form> actian="{% url 'add_comment' about.id %}" method="post" >
+        {% csrf_token %}
+        <textarea name="text" placeholder="kament yoz"></textarea>
+        <button type="submit"Otpravit</button>
+    </form>
+{% else %}
+    <p>Fikir bildirish uchun reklama korin.</p>
+{% endif %} 
+</html>

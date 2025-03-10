@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ popular.shax }}</title>
+</head>
+<body>
+    <h1>{{ popular.cheg }}</h1>
+    <img src="{{ popular.img.url }}" alt="{{ popular.title }}" style="max-width: 100%; height: auto;">
+    <p>{{ popular.description }}</p>
+    <p><strong>Uploaded on:</strong> {{ popular.uploaded_at }}</p>
+    <a href="{% url 'index' %}">Back to Home</a> <!-- Asosiy sahifaga qaytish -->
+</body>
+</html>

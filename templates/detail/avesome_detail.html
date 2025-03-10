@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ avesome.name }}</title>
+</head>
+<body>
+    <img src="{{ avesome.img.url }}" alt="{{ avesome. }}" style="max-width: 100%; height: auto;"> <h1>{{ avesome.date }}</h1> <h1>{{ avesome.nomber }}</h1> <h1>{{ avesome.kal }}</h1> <h1>{{ avesome.text }}</h1>
+    <p>{{ avesome.description }}</p>
+    <p><strong>Uploaded on:</strong> {{ avesome.uploaded_at }}</p>
+    <a href="{% url 'index' %}">Back to Home</a> <!-- Asosiy sahifaga qaytish -->
+</body>
+</html>

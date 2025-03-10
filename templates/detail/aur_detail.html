@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ aur.title }}</title>
+</head>
+<body>
+    <h1>{{ popular.title }}</h1>
+    <img src="{{ aur.aur.url }}" alt="{{ aur.title }}" style="max-width: 100%; height: auto;">
+    <p>{{ aur.description }}</p>
+    <p><strong>Uploaded on:</strong> {{ aur.uploaded_at }}</p>
+    <a href="{% url 'index' %}">Back to Home</a> <!-- Asosiy sahifaga qaytish -->
+</body>
+</html>
